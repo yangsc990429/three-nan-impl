@@ -6,14 +6,15 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://code.alibabatech.com/schema/dubbo
     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-    <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="dubbo-service-consumer" />
-    <!-- 使用multicast广播注册中心暴露服务地址 -->
-    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
-    <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
-    <!-- 声明需要暴露的服务接口 -->
-    <dubbo:reference id="myService" interface="org.three.service.TestService"/>
-    <!-- 声明需要暴露的服务接口 -->
-    <dubbo:reference id="mytestService" interface="org.three.service.Test1Service"/>
+<!-- 提供方应用信息，用于计算依赖关系 -->
+<dubbo:application name="dubbo-service-consumer" />
+<!-- 使用multicast广播注册中心暴露服务地址 -->
+<!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
+<!-- 使用zookeeper注册中心暴露服务地址 -->
+<dubbo:registry address="zookeeper://127.0.0.1:2181" />
+
+<!-- 声明需要暴露的服务接口 -->
+<dubbo:reference id="myService" interface="org.three.service.TestService"/>
+<dubbo:reference id="mytestService" interface="org.three.service.Test1Service"/>
+
 </beans>
